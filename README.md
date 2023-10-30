@@ -25,7 +25,7 @@ Step 0: navigate to [ood.rc.ufl.edu](ood.rc.ufl.edu) and request a jupyter noteb
 * [exercise1_run_multigpu.sh](exercise1_run_multigpu.sh): runner code
 You can test your code by run `./exercise1_run_multigpu.sh`
 
-## Exercise 2: adapt your serial code to single node multiple processes using the torchrun utility
+## Exercise 2: adapt your serial code to single node multiple processes using the `torchrun` utility
 * [exercise2_multigpu_torchrun.py](exercise2_multigpu_torchrun.py): DDP setup on a single node using `torchrun`
 * [exercise2_run_multigpu_torchrun.sh](exercise2_run_multigpu_torchrun.sh): runner
 You can test your code by run `exercise2_run_multigpu_torchrun.sh`
