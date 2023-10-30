@@ -7,28 +7,30 @@ The series starts with a non-distributed script that runs on a single GPU and in
 Code is forked and adapted for the DDP tutorial series at https://pytorch.org/tutorials/beginner/ddp_series_intro.html
 
 
-## How to use this Repo.
+# How to use this Repo.
 
-Step 0: navigate to [ood.rc.ufl.edu](ood.rc.ufl.edu) and request a jupyter notebook with 1 node and 2 GPUs:  
+## Step 0: navigate to [ood.rc.ufl.edu](ood.rc.ufl.edu) and request a jupyter notebook with 1 node and 2 GPUs:  
   - Number of CPU = 8
   - Maximum memory = 16
   - Cluster partition = `gpu`
   - Generic Resource Request = "gpu:geforece:2" or "gpu:a100:2"
   - Additional SLURM Options = --reservation=?? (only used during the workshop period)
 
-## Get started with the starter code
+## Step 1: Get started with the starter code
 * [single_gpu.py](single_gpu.py): Non-distributed training script on a single GPU
-* [How to run]: `python single_gpu.py` 
+* [How to run]: `python single_gpu.py 50 10` 
 
-## Exercise 1: adapt your serial code to single node multiple processes run with `mp.spawn` utility and user-specified setting. 
+
+## Step 2
+### Exercise 2.1: adapt your serial code to single node multiple processes run with `mp.spawn` utility and user-specified setting. 
 * [exercise1_multigpu.py](exercise1_multigpu.py): DDP on a single node, with `mp.spawn`  
 * [exercise1_run_multigpu.sh](exercise1_run_multigpu.sh): runner code
 You can test your code by run `./exercise1_run_multigpu.sh`
 
-## Exercise 2: adapt your serial code to single node multiple processes using the `torchrun` utility
+### Exercise 2.2: adapt your serial code to single node multiple processes using the `torchrun` utility
 * [exercise2_multigpu_torchrun.py](exercise2_multigpu_torchrun.py): DDP setup on a single node using `torchrun`
 * [exercise2_run_multigpu_torchrun.sh](exercise2_run_multigpu_torchrun.sh): runner
-You can test your code by run `exercise2_run_multigpu_torchrun.sh`
+You can test your code by run `./exercise2_run_multigpu_torchrun.sh`
 
 ## Step 3. Run MultiNode parallel jobs using SLURM  on HPG (work offline)
 * [slurm-moltinode/multigpu_torchrun.py](slurm-moltinode/multigpu_torchrun.py): training script for multiGPU
