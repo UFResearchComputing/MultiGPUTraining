@@ -9,7 +9,7 @@ Code is forked and adapted for the DDP tutorial series at https://pytorch.org/tu
 
 ## How to use this Repo.
 
-Step 0: navigate to `[ood.rc.ufl.edu](ood.rc.ufl.edu)` and request a jupyter notebook with 1 node and 2 GPUs:  
+Step 0: navigate to [ood.rc.ufl.edu](ood.rc.ufl.edu) and request a jupyter notebook with 1 node and 2 GPUs:  
   - Number of CPU = 8
   - Maximum memory = 16
   - Cluster partition = `gpu`
