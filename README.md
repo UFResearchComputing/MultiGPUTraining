@@ -10,11 +10,15 @@ Code is forked and adapted for the DDP tutorial series at https://pytorch.org/tu
 # How to use this Repo.
 
 ## Step 0: navigate to [ood.rc.ufl.edu](ood.rc.ufl.edu) and request a jupyter notebook with 1 node and 2 GPUs:  
-  - Number of CPU = 8
-  - Maximum memory = 16
+  - Number of CPUs = 4
+  - Maximum memory = 8
+  - SLURM Account = `ai-workshop`
+  - QoS = `ai-workshop`
   - Cluster partition = `gpu`
-  - Generic Resource Request = "gpu:geforece:2" or "gpu:a100:2"
-  - Additional SLURM Options = --reservation=?? (only used during the workshop period)
+  - Generic Resource Request = `gpu:geforece:2`
+  - Additional SLURM Options = `--reservation=rc-workshop` (only used during the workshop period)
+
+![](image.png)
 
 ## Step 1: Get started with the starter code
 * [single_gpu.py](single_gpu.py): Non-distributed training script on a single GPU
