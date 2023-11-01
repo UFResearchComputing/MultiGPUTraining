@@ -22,8 +22,12 @@ Code is forked and adapted for the DDP tutorial series at https://pytorch.org/tu
 
 ## Step 1: Get started with the starter code
 * [single_gpu.py](single_gpu.py): Non-distributed training script on a single GPU
-* [How to run]: `python single_gpu.py 50 10` 
+* [How to run]:
 
+```bash
+module load pytorch/1.10
+python single_gpu.py 50 10` 
+```
 
 ## Step 2
 ### Exercise 2.1: adapt your serial code to single node multiple processes run with `mp.spawn` utility and user-specified setting. 
