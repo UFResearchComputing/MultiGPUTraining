@@ -29,17 +29,20 @@ Code is forked and adapted for the DDP tutorial series at https://pytorch.org/tu
 ### Exercise 2.1: adapt your serial code to single node multiple processes run with `mp.spawn` utility and user-specified setting. 
 * [exercise1_multigpu.py](exercise1_multigpu.py): DDP on a single node, with `mp.spawn`  
 * [exercise1_run_multigpu.sh](exercise1_run_multigpu.sh): runner code
+
 You can test your code by run `./exercise1_run_multigpu.sh`
 
 ### Exercise 2.2: adapt your serial code to single node multiple processes using the `torchrun` utility
 * [exercise2_multigpu_torchrun.py](exercise2_multigpu_torchrun.py): DDP setup on a single node using `torchrun`
 * [exercise2_run_multigpu_torchrun.sh](exercise2_run_multigpu_torchrun.sh): runner
+
 You can test your code by run `./exercise2_run_multigpu_torchrun.sh`
 
 ## Step 3. Run MultiNode parallel jobs using SLURM  on HPG (work offline)
 * [slurm-moltinode/multigpu_torchrun.py](slurm-moltinode/multigpu_torchrun.py): training script for multiGPU
 * [slurm-moltinode/launch_ddp_2N4G.sh](slurm-moltinode/launch_ddp_2N4G.sh): Sample slurm script to launch a trining script using torchrun on 2 Nodes with 2 GPUs on each node.
 * [slurm-moltinode/launch_ddp_4N4G.sh](slurm-moltinode/launch_ddp_4N4G.sh): Sample slurm script to launch a trining script using torchrun on 4 Nodes with 1 GPUs on each node.
+
 You can submit your SLURM job script by run `sbatch launch_ddp_2N4G.sh`
 
 ## Solutions
